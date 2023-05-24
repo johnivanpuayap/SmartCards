@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Pomodoro">
+
+    <Button
+        android:id="@+id/btnFocus"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="128dp"
+        android:background="@drawable/pomodoro_focusbreak"
+        android:fontFamily="@font/telegrafregular"
+        android:text="Focus"
+        android:textColor="@drawable/pomodoro_focusbreak_textcolor"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnShortBeak"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/pomodoro_focusbreak"
+        android:fontFamily="@font/telegrafregular"
+        android:text="Short Break"
+        android:textColor="@drawable/pomodoro_focusbreak_textcolor"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnLongBreak"
+        app:layout_constraintStart_toEndOf="@+id/btnFocus"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnLongBreak"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="25dp"
+        android:fontFamily="@font/telegrafregular"
+        android:text="Long Break"
+        android:textSize="10dp"
+        android:textColor="@drawable/pomodoro_focusbreak_textcolor"
+        android:background="@drawable/pomodoro_focusbreak"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/btnStart"
+        app:layout_constraintTop_toBottomOf="@+id/btnShortBeak"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/minute"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/round_back"
+            android:fontFamily="@font/roboto_mono"
+            android:gravity="center"
+            android:text="25"
+            android:textColor="#000000"
+            android:textSize="75dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text=":"
+            android:textColor="#000000"
+            android:textSize="100sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/second"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/round_back"
+            android:fontFamily="@font/roboto_mono"
+            android:gravity="center"
+            android:text="00"
+            android:textColor="#000000"
+            android:textSize="75dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="263dp"
+        android:text="Start"
+        android:background="@drawable/pomodoro_focusbreak"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnShortBeak" />
+
+    <Button
+        android:id="@+id/btnSkip"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="20dp"
+        android:text="Skip"
+        android:background="@drawable/pomodoro_focusbreak"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStart" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

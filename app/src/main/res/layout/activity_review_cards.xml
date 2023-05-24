@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReviewCards">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="409dp"
+        android:layout_height="400dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtFolderNameReview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/telegrafultrabold"
+                android:text="Folder Name"
+                android:textSize="40dp"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/txtFrontBack"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="#FCDDB0"
+                android:cursorVisible="false"
+                android:ems="10"
+                android:fontFamily="@font/telegrafregular"
+                android:gravity="start|top"
+                android:inputType="none"
+                android:paddingBottom="0dp"
+                android:scrollbars="none"
+                android:textSize="30dp"
+                android:textColor="@color/black"
+                android:clickable="true"
+                />
+
+            <TextView
+                android:id="@+id/txtNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/telegrafultrabold"
+                android:text="0/0"
+                android:textSize="20dp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="80dp"
+        android:text="Check"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <Button
+        android:id="@+id/btnWrong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="30dp"
+        android:text="Wrong"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+</androidx.constraintlayout.widget.ConstraintLayout>
